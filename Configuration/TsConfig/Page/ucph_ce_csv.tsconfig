@@ -2,6 +2,7 @@
 #### NEW CONTENT ELEMENT WIZARD ####
 ####################################
 mod.wizards.newContentElement.wizardItems.data {
+    header = LLL:EXT:ucph_ce_csv/Resources/Private/Language/locallang_be.xlf:ucph_ce_csv_wizard_tab
     elements {
         ucph_ce_csv {
             iconIdentifier = ucph_ce_csv_icon
