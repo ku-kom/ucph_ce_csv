@@ -1,0 +1,16 @@
+TCEFORM {
+    tt_content {
+        # cType tables:
+        table_class {
+           types {
+                table {
+                    addItems {
+                        # More table styles:
+                        hover = LLL:EXT:ucph_ce_csv/Resources/Private/Language/locallang_be.xlf:table_hover
+                        condensed = LLL:EXT:ucph_ce_csv/Resources/Private/Language/locallang_be.xlf:table_condensed
+                    }
+                }
+            }
+        }
+    }
+}

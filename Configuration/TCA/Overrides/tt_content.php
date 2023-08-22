@@ -37,7 +37,7 @@ call_user_func(function ($extKey ='ucph_ce_csv', $contentType ='ucph_ce_csv') {
                 --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.headers;headers,
                 media;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:media.ALT.uploads_formlabel,
                 --palette--;;tableconfiguration,
-                --palette--;;tablelayout,
+                --palette--;;tablelayout,table_caption,
                 --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance,
                 --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.frames;frames,
                 --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.appearanceLinks;appearanceLinks,
@@ -60,4 +60,78 @@ call_user_func(function ($extKey ='ucph_ce_csv', $contentType ='ucph_ce_csv') {
             ]
         ],
     ];
+
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns('tt_content', [
+        // Add datatables checkbox element to enable datatables
+        'tx_ucph_ce_csv_enable_datatable' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_be.xlf:enable_datatable',
+            'onChange' => 'reload',
+            'config' => [
+                'type' => 'check',
+                'renderType' => 'checkboxToggle',
+                'items' => [
+                    [
+                        0 => '',
+                    ],
+                ],
+            ],
+        ],
+        'tx_ucph_ce_csv_datatable_columnpicker' => [
+            'displayCond' =>'FIELD:tx_ucph_ce_csv_enable_datatable:=:1',
+            'exclude' => true,
+            'label' => 'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_be.xlf:column_picker',
+            'config' => [
+                'type' => 'select',
+                'renderType' => 'selectSingle',
+                'items' => [
+                    [
+                        '1 (default)',
+                        0,
+                    ],
+                    [
+                        '2',
+                        1,
+                    ],
+                    [
+                        '3',
+                        2,
+                    ],
+                    [
+                        '4',
+                        3,
+                    ],
+                    [
+                        '5',
+                        4,
+                    ],
+                    [
+                        '6',
+                        5,
+                    ]
+                ],
+                'default' => 0
+            ],
+        ],
+        'tx_ucph_ce_tables_datatable_columnsort' => [
+            'displayCond' =>'FIELD:tx_ucph_ce_csv_enable_datatable:=:1',
+            'exclude' => true,
+            'label' => 'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_be.xlf:column_sort',
+            'config' => [
+                'type' => 'select',
+                'renderType' => 'selectSingle',
+                'items' => [
+                    [
+                        'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_be.xlf:column_sort_asc',
+                        'asc',
+                    ],
+                    [
+                        'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_be.xlf:column_sort_desc',
+                        'desc',
+                    ]
+                ],
+                'default' => 'asc'
+            ],
+        ],
+    ]);
 });

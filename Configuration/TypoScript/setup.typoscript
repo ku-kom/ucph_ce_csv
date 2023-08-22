@@ -29,7 +29,28 @@ tt_content.ucph_ce_csv {
                 field = table_enclosure
             }
             maximumColumns.field = cols
+            as = csv
         }
     }
-
 }
+
+##########################
+#### OPTION TO ADD CSS ###
+##########################
+ucph_ce_csv.pagecss = TEXT
+ucph_ce_csv.pagecss.value = {$ucph_ce_csv.assets.Css}
+htmlSanitize = 1
+
+##########################
+#### OPTION TO ADD JS ####
+##########################
+ucph_ce_csv.pagejs = TEXT
+ucph_ce_csv.pagejs.value = {$ucph_ce_csv.assets.Js}
+htmlSanitize = 1
+
+##################################################
+#### OPTION TO ADD DATATABLES LANGUAGE FILE PATH #
+##################################################
+ucph_ce_csv.datatableLangFilePath = TEXT
+ucph_ce_csv.datatableLangFilePath.value = {$ucph_ce_csv.assets.datatableLangFilePath}
+htmlSanitize = 1

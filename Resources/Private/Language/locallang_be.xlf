@@ -12,8 +12,32 @@
         <trans-unit id="ucph_ce_csv_desc">
             <source>Render a table from a .csv file.</source>
         </trans-unit>
-        <trans-unit id="ucph_ce_csv_wizard_tab">
-            <source>Data</source>
+        <trans-unit id="tablelayout.hover" xml:space="preserve">
+            <source>Hover</source>
+        </trans-unit>
+        <trans-unit id="tablelayout.condensed" xml:space="preserve">
+            <source>Condensed table</source>
+        </trans-unit>
+        <trans-unit id="enable_datatable" xml:space="preserve">
+            <source>Enable datatable</source>
+        </trans-unit>
+        <trans-unit id="column_picker" xml:space="preserve">
+            <source>By default sort by column</source>
+        </trans-unit>
+        <trans-unit id="column_sort" xml:space="preserve">
+            <source>Sort order</source>
+        </trans-unit>
+        <trans-unit id="column_sort_asc" xml:space="preserve">
+            <source>Ascending</source>
+        </trans-unit>
+        <trans-unit id="column_sort_desc" xml:space="preserve">
+            <source>Descending</source>
+        </trans-unit>
+        <trans-unit id="table_hover" xml:space="preserve">
+            <source>Hover</source>
+        </trans-unit>
+        <trans-unit id="table_condensed" xml:space="preserve">
+            <source>Condensed</source>
         </trans-unit>
         </body>
     </file>
