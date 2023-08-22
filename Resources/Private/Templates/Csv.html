@@ -2,6 +2,19 @@
 <f:layout name="Default" />
 <f:section name="Main">
 
+<f:if condition="{table}">
+            <f:if condition="{data.tx_ucph_ce_tables_enable_datatable} != 1">
+                <f:then>
+                    <div class="table-responsive">
+                        <f:render section="tableContent" arguments="{_all}" />
+                    </div>
+                </f:then>
+                <f:else>
+                    <f:render section="tableContent" arguments="{_all}" />
+                </f:else>
+            </f:if>
+        </f:if>
+        <f:section name="tableContent">
     <f:for each="{files}" as="file">
         <f:if condition="{file.table}">
             <div class="table-responsive">
@@ -29,7 +42,7 @@
                         </f:if>
                         <tr>
                             <f:for each="{row}" as="cell" iteration="columnIterator">
-                                <f:render partial="Table/Columns" arguments="{_all}" />
+                                <f:render partial="Columns" arguments="{_all}" />
                             </f:for>
                         </tr>
                         <f:if condition="{rowIterator.isFirst}">
@@ -57,6 +70,16 @@
             </div>
         </f:if>
     </f:for>
+
+</f:section>
+
+<f:if condition="{data.tx_ucph_ce_tables_enable_datatable} == 1">
+    <f:asset.css identifier="{data.CType}_css" href="{f:cObject(typoscriptObjectPath: 'ucph_ce_csv.pagecss')}" />
+</f:if>
+<f:if condition="{data.tx_ucph_ce_tables_enable_datatable} == 1">
+    <f:asset.script identifier="{data.CType}_js" src="{f:cObject(typoscriptObjectPath: 'ucph_ce_csv.pagejs')}" />
+    <f:render partial="Datatable"  arguments="{_all}" />
+</f:if>
 
 </f:section>
 </html>

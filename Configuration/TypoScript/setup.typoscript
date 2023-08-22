@@ -5,12 +5,15 @@ tt_content.ucph_ce_csv {
     templateName = Csv
     templateRootPaths {
         105 = EXT:ucph_ce_csv/Resources/Private/Templates/
+        106 = {$ucph_ce_csv.templates.templateRootPath}
     }
     partialRootPaths {
         105 = EXT:ucph_ce_csv/Resources/Private/Partials/
+        106 = {$ucph_ce_csv.templates.partialRootPath}
     }
     layoutRootPaths {
         105 = EXT:ucph_ce_csv/Resources/Private/Layouts/
+        106 = {$ucph_ce_csv.templates.layoutRootPath}
     }
 
     dataProcessing {
