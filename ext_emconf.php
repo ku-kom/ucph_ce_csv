@@ -4,8 +4,8 @@
  * Extension Manager/Repository config file for ext "ucph_ce_csv".
  */
 $EM_CONF[$_EXTKEY] = [
-    'title' => 'UCPH TYPO3 content element "Regular text"',
-    'description' => 'UCPH TYPO3 content element "Regular text"',
+    'title' => 'UCPH TYPO3 content element "CSV"',
+    'description' => 'UCPH TYPO3 content element to render a table from a .csv file',
     'category' => 'templates',
     'constraints' => [
         'depends' => [
