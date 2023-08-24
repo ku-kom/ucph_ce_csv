@@ -3,7 +3,7 @@
 <f:section name="Main">
  
     <f:if condition="{csv}">
-        <f:if condition="{data.tx_ucph_ce_csv_enable_datatable} != 1">
+        <f:if condition="{data.tx_ucph_content_csv_enable_datatable} != 1">
             <f:then>
                 <div class="table-responsive">
                     <f:render section="tableContent" arguments="{_all}" />
@@ -18,7 +18,7 @@
     <f:section name="tableContent">
         <f:for each="{csv}" as="file">
             <f:if condition="{file.table}">
-                <table class="table{f:if(condition: data.table_class, then: ' table-{data.table_class}')} table_{data.uid}{f:if(condition: data.tx_ucph_ce_csv_enable_datatable, then: ' table-datatable')}"{f:if(condition: data.tx_ucph_ce_csv_enable_datatable, then: ' data-col="{data.tx_ucph_ce_csv_datatable_columnpicker}" data-sortorder="{data.tx_ucph_ce_csv_datatable_columnsort}"')}>
+                <table class="table{f:if(condition: data.table_class, then: ' table-{data.table_class}')} table_{data.uid}{f:if(condition: data.tx_ucph_content_csv_enable_datatable, then: ' table-datatable')}"{f:if(condition: data.tx_ucph_content_csv_enable_datatable, then: ' data-col="{data.tx_ucph_content_csv_datatable_columnpicker}" data-sortorder="{data.tx_ucph_content_csv_datatable_columnsort}"')}>
                     <f:if condition="{data.table_caption}">
                         <caption>{data.table_caption}</caption>
                     </f:if>
@@ -74,10 +74,10 @@
         </f:for>
     </f:section>
     <f:if condition="{data.tx_ucph_ce_tables_enable_datatable} == 1">
-        <f:asset.css identifier="{data.CType}_css" href="{f:cObject(typoscriptObjectPath: 'ucph_ce_csv.pagecss')}" />
+        <f:asset.css identifier="{data.CType}_css" href="{f:cObject(typoscriptObjectPath: 'ucph_content_csv.pagecss')}" />
     </f:if>
     <f:if condition="{data.tx_ucph_ce_tables_enable_datatable} == 1">
-        <f:asset.script identifier="{data.CType}_js" src="{f:cObject(typoscriptObjectPath: 'ucph_ce_csv.pagejs')}" />
+        <f:asset.script identifier="{data.CType}_js" src="{f:cObject(typoscriptObjectPath: 'ucph_content_csv.pagejs')}" />
         <f:render partial="Datatable" arguments="{_all}" />
     </f:if>
 </f:section>

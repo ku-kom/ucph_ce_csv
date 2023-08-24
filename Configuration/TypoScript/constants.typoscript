@@ -1,17 +1,17 @@
-ucph_ce_csv {
+ucph_content_csv {
     templates {
         # cat=UCPH CSV/file; type=string; label=Layout Root Path: Path to templates (with a trailing slash).
-        templateRootPath = EXT:ucph_ce_csv/Resources/Private/Templates/
+        templateRootPath = EXT:ucph_content_csv/Resources/Private/Templates/
         # cat=UCPH CSV/file; type=string; label=Partial Root Path: Path to partials (with a trailing slash).
-        partialRootPath = EXT:ucph_ce_csv/Resources/Private/Partials/
+        partialRootPath = EXT:ucph_content_csv/Resources/Private/Partials/
         # cat=UCPH CSV/file; type=string; label=Layout Root Path: Path to templates (with a trailing slash).
-        layoutRootPath = EXT:ucph_ce_csv/Resources/Private/Layouts/
+        layoutRootPath = EXT:ucph_content_csv/Resources/Private/Layouts/
     }
     assets {
         # cat=UCPH CSV/Assets/c0; type=string; label=CSS assets: Path to stylesheet.
-        Css = EXT:ucph_ce_csv/Resources/Public/Css/Dist/datatables.min.css
+        Css = EXT:ucph_content_csv/Resources/Public/Css/Dist/datatables.min.css
         # cat=UCPH CSV/Assets/c1; type=string; label=JavaScript assets: Path to javaScript file.
-        Js = EXT:ucph_ce_csv/Resources/Public/JavaScript/Dist/datatables.min.js
+        Js = EXT:ucph_content_csv/Resources/Public/JavaScript/Dist/datatables.min.js
         # cat=UCPH CSV/Assets/c2; type=string; label=Datatables language file. Path without language and file extension, e.g.: //cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Danish.json, becomes: //cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/
         datatableLangFilePath = //cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/
     }

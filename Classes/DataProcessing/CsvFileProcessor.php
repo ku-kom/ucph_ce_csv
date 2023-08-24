@@ -7,7 +7,7 @@
  * LICENSE file that was distributed with this source code.
  */
 
-namespace UniversityOfCopenhagen\UcphCeCsv\DataProcessing;
+namespace UniversityOfCopenhagen\UcphContentCsv\DataProcessing;
 
 use TYPO3\CMS\Core\Resource\File;
 use TYPO3\CMS\Core\Resource\FileReference;

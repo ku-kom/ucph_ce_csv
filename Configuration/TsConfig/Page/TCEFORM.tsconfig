@@ -6,8 +6,8 @@ TCEFORM {
                 table {
                     addItems {
                         # More table styles:
-                        hover = LLL:EXT:ucph_ce_csv/Resources/Private/Language/locallang_be.xlf:table_hover
-                        condensed = LLL:EXT:ucph_ce_csv/Resources/Private/Language/locallang_be.xlf:table_condensed
+                        hover = LLL:EXT:ucph_content_csv/Resources/Private/Language/locallang_be.xlf:table_hover
+                        condensed = LLL:EXT:ucph_content_csv/Resources/Private/Language/locallang_be.xlf:table_condensed
                     }
                 }
             }

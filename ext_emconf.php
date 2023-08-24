@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Extension Manager/Repository config file for ext "ucph_ce_csv".
+ * Extension Manager/Repository config file for ext "ucph_content_csv".
  */
 $EM_CONF[$_EXTKEY] = [
     'title' => 'UCPH TYPO3 content element "CSV"',
@@ -15,7 +15,7 @@ $EM_CONF[$_EXTKEY] = [
     ],
     'autoload' => [
         'psr-4' => [
-            'UniversityOfCopenhagen\\UcphCeCsv\\' => 'Classes',
+            'UniversityOfCopenhagen\\UcphContentCsv\\' => 'Classes',
         ],
     ],
     'state' => 'stable',

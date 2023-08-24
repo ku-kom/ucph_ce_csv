@@ -1,7 +1,7 @@
 <?php declare(strict_types=1);
 
 /*
- * This file is part of the package ucph_ce_csv.
+ * This file is part of the package ucph_content_csv.
  * For the full copyright and license information, please read the
  * LICENSE file that was distributed with this source code.
  * June 2023 Nanna Ellegaard, University of Copenhagen.
@@ -9,16 +9,16 @@
 
 defined('TYPO3') or die();
 
-call_user_func(function ($extKey ='ucph_ce_csv', $contentType ='ucph_ce_csv') {
+call_user_func(function ($extKey ='ucph_content_csv', $contentType ='ucph_content_csv') {
     // Adds the content element to the "Type" dropdown
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
         'tt_content',
         'CType',
         [
-            'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_be.xlf:ucph_ce_csv_title',
+            'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_be.xlf:ucph_content_csv_title',
             $contentType,
             // icon identifier
-            'ucph_ce_csv_icon',
+            'ucph_content_csv_icon',
         ],
         'textmedia',
         'after'
@@ -63,7 +63,7 @@ call_user_func(function ($extKey ='ucph_ce_csv', $contentType ='ucph_ce_csv') {
 
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns('tt_content', [
         // Add datatables checkbox element to enable datatables
-        'tx_ucph_ce_csv_enable_datatable' => [
+        'tx_ucph_content_csv_enable_datatable' => [
             'exclude' => true,
             'label' => 'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_be.xlf:enable_datatable',
             'onChange' => 'reload',
@@ -77,8 +77,8 @@ call_user_func(function ($extKey ='ucph_ce_csv', $contentType ='ucph_ce_csv') {
                 ],
             ],
         ],
-        'tx_ucph_ce_csv_datatable_columnpicker' => [
-            'displayCond' =>'FIELD:tx_ucph_ce_csv_enable_datatable:=:1',
+        'tx_ucph_content_csv_datatable_columnpicker' => [
+            'displayCond' =>'FIELD:tx_ucph_content_csv_enable_datatable:=:1',
             'exclude' => true,
             'label' => 'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_be.xlf:column_picker',
             'config' => [
@@ -113,8 +113,8 @@ call_user_func(function ($extKey ='ucph_ce_csv', $contentType ='ucph_ce_csv') {
                 'default' => 0
             ],
         ],
-        'tx_ucph_ce_tables_datatable_columnsort' => [
-            'displayCond' =>'FIELD:tx_ucph_ce_csv_enable_datatable:=:1',
+        'tx_ucph_content_csv_datatable_columnsort' => [
+            'displayCond' =>'FIELD:tx_ucph_content_csv_enable_datatable:=:1',
             'exclude' => true,
             'label' => 'LLL:EXT:' . $extKey . '/Resources/Private/Language/locallang_be.xlf:column_sort',
             'config' => [

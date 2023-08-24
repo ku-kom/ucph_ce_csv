@@ -3,14 +3,14 @@
 ####################################
 mod.wizards.newContentElement.wizardItems.special {
     elements {
-        ucph_ce_csv {
-            iconIdentifier = ucph_ce_csv_icon
-            title = LLL:EXT:ucph_ce_csv/Resources/Private/Language/locallang_be.xlf:ucph_ce_csv_title
-            description = LLL:EXT:ucph_ce_csv/Resources/Private/Language/locallang_be.xlf:ucph_ce_csv_desc
+        ucph_content_csv {
+            iconIdentifier = ucph_content_csv_icon
+            title = LLL:EXT:ucph_content_csv/Resources/Private/Language/locallang_be.xlf:ucph_content_csv_title
+            description = LLL:EXT:ucph_content_csv/Resources/Private/Language/locallang_be.xlf:ucph_content_csv_desc
             tt_content_defValues {
-                CType = ucph_ce_csv
+                CType = ucph_content_csv
             }
         }
     }
-    show := addToList(ucph_ce_csv)
+    show := addToList(ucph_content_csv)
 }

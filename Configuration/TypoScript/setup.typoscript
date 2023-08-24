@@ -1,23 +1,23 @@
-tt_content.ucph_ce_csv >
+tt_content.ucph_content_csv >
 # CTYPE: CSV
-tt_content.ucph_ce_csv =< lib.contentElement
-tt_content.ucph_ce_csv {
+tt_content.ucph_content_csv =< lib.contentElement
+tt_content.ucph_content_csv {
     templateName = Csv
     templateRootPaths {
-        105 = EXT:ucph_ce_csv/Resources/Private/Templates/
-        106 = {$ucph_ce_csv.templates.templateRootPath}
+        105 = EXT:ucph_content_csv/Resources/Private/Templates/
+        106 = {$ucph_content_csv.templates.templateRootPath}
     }
     partialRootPaths {
-        105 = EXT:ucph_ce_csv/Resources/Private/Partials/
-        106 = {$ucph_ce_csv.templates.partialRootPath}
+        105 = EXT:ucph_content_csv/Resources/Private/Partials/
+        106 = {$ucph_content_csv.templates.partialRootPath}
     }
     layoutRootPaths {
-        105 = EXT:ucph_ce_csv/Resources/Private/Layouts/
-        106 = {$ucph_ce_csv.templates.layoutRootPath}
+        105 = EXT:ucph_content_csv/Resources/Private/Layouts/
+        106 = {$ucph_content_csv.templates.layoutRootPath}
     }
 
     dataProcessing {
-        10 = UniversityOfCopenhagen\UcphCeCsv\DataProcessing\CsvFileProcessor
+        10 = UniversityOfCopenhagen\UcphContentCsv\DataProcessing\CsvFileProcessor
         10 {
             references.fieldName = media
             fieldDelimiter.char.cObject = TEXT
@@ -37,20 +37,20 @@ tt_content.ucph_ce_csv {
 ##########################
 #### OPTION TO ADD CSS ###
 ##########################
-ucph_ce_csv.pagecss = TEXT
-ucph_ce_csv.pagecss.value = {$ucph_ce_csv.assets.Css}
+ucph_content_csv.pagecss = TEXT
+ucph_content_csv.pagecss.value = {$ucph_content_csv.assets.Css}
 htmlSanitize = 1
 
 ##########################
 #### OPTION TO ADD JS ####
 ##########################
-ucph_ce_csv.pagejs = TEXT
-ucph_ce_csv.pagejs.value = {$ucph_ce_csv.assets.Js}
+ucph_content_csv.pagejs = TEXT
+ucph_content_csv.pagejs.value = {$ucph_content_csv.assets.Js}
 htmlSanitize = 1
 
 ##################################################
 #### OPTION TO ADD DATATABLES LANGUAGE FILE PATH #
 ##################################################
-ucph_ce_csv.datatableLangFilePath = TEXT
-ucph_ce_csv.datatableLangFilePath.value = {$ucph_ce_csv.assets.datatableLangFilePath}
+ucph_content_csv.datatableLangFilePath = TEXT
+ucph_content_csv.datatableLangFilePath.value = {$ucph_content_csv.assets.datatableLangFilePath}
 htmlSanitize = 1

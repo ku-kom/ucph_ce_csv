@@ -1,5 +1,5 @@
 {
-    "name": "university-of-copenhagen/ucph-ce-csv",
+    "name": "university-of-copenhagen/ucph-content-csv",
     "type": "typo3-cms-extension",
     "description": "UCPH TYPO3 content element \"CSV\"",
     "authors": [{
@@ -13,12 +13,12 @@
     },
     "autoload": {
         "psr-4": {
-            "UniversityOfCopenhagen\\UcphCeCsv\\": "Classes/"
+            "UniversityOfCopenhagen\\UcphContentCsv\\": "Classes/"
         }
     },
     "extra": {
         "typo3/cms": {
-            "extension-key": "ucph_ce_csv"
+            "extension-key": "ucph_content_csv"
         }
     }
 }
